@@ -11,10 +11,13 @@ import App from "./App";
 import Home from "./routes/Home";
 import Experience from "./routes/Experience";
 import Contact from "./routes/Contact";
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+  <Header />
     <Routes>
       <Route element={<App />}>
         <Route path="/" element={<Home />} />
@@ -22,6 +25,7 @@ root.render(
         <Route path="/contact" element={<Contact />} />
       </Route>
     </Routes>
+    <Footer />
   </BrowserRouter>
 );
 

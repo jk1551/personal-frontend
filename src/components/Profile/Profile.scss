@@ -1,4 +1,4 @@
-$primary: #eeba2c;
+$primary: #007500;
 $secondary: #1D1E22;
 $light: white;
 $dark: #000000;
@@ -6,12 +6,12 @@ $alternate: #262626;
 
 :root {
     /* yellow and black */
-    --bg-image: url('https://images.unsplash.com/photo-1488330890490-c291ecf62571?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    --bg-image: url('https://images.unsplash.com/photo-1468434453985-b1ca3b555f00?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
 }
 
 .profile-wrapper {
     width: 100%;
-    height: auto;
+    height: 100vh;
     margin: 0;
     padding: 0;
     display: flex;
@@ -30,7 +30,8 @@ $alternate: #262626;
   height: 100%;
   width: 100%;
   position: absolute;
-  filter: blur(40px);
+  filter: blur(20px);
+  z-index: -1;
     }
   }
 
@@ -53,26 +54,58 @@ $alternate: #262626;
   border-radius: 10px;
 }
 
-.profile-card:hover {
-    transform: translate3D(0,-1px,0) scale(1.03);
-  }
-
 img {
     height: auto;
     width: auto;
     border-radius: 100%;
     padding: 5%;
-    z-index: 1;
 }
 
 .profile-content {
     width: auto;
     height: auto;
-    margin: 20%;
+    margin: 10%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-content: center;
     color: $light;
-    z-index: 1;
 }
+
+.text-gradient {
+    background: linear-gradient(to right, #007500, #00D100);
+    background-clip: inherit;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.button-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+
+.learn-button {
+    font-family: sans-serif;
+    font-size: 18px;
+    padding: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: $light;
+    background-color: $primary;
+    text-decoration: none;
+  }
+
+  .icon {
+      padding-left: 5px;
+  }
